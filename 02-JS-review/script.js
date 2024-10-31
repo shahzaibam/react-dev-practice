@@ -145,32 +145,85 @@ function getBook(id) {
 
 //DESTRUCTIRING
 
-const book = getBook(2);
+// const book = getBook(2);
 
-// const title = book.title;
+// // const title = book.title;
 
-// const author = book.author;
+// // const author = book.author;
 
-const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
-  book;
+// const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
+//   book;
 
-console.log(author, title, genres);
+// console.log(author, title, genres);
 
-// const primaryGenre = genres[0];
-// const secondaryGenre = genres[1];
+// // const primaryGenre = genres[0];
+// // const secondaryGenre = genres[1];
 
-const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+// const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
 
-console.log(primaryGenre, secondaryGenre, otherGenres);
+// console.log(primaryGenre, secondaryGenre, otherGenres);
 
-var nuevosGenres = [...genres, "yo soy el acoplao"];
+// var nuevosGenres = [...genres, "yo soy el acoplao"];
 
-console.log(nuevosGenres);
+// console.log(nuevosGenres);
 
-const updatedBook = {
-  ...book,
-  actor: "Akshay",
-  pages: 105,
-};
+// const updatedBook = {
+//   ...book,
+//   actor: "Shah Zaib",
+//   pages: 105,
+// };
 
-console.log(updatedBook);
+// console.log(updatedBook);
+
+// console.log(true && "Some string");
+// console.log(false && "Some string");
+// console.log(title && false);
+
+// const books = getBooks();
+
+// const x = [1, 2, 3, 4, 5].map((el) => el * 2);
+
+// console.log(x);
+
+// const allBookTitles = books.map((book) => book.title);
+
+// console.log(allBookTitles);
+
+// const allBookTitlesAndAuthor = books.map((book) => ({
+//   title: book.title,
+//   autor: book.author,
+// }));
+
+// console.log(allBookTitlesAndAuthor);
+
+// const longBooks = books.filter((book) => book.pages > 500);
+
+// console.log(longBooks);
+
+// const adventureBooks = books
+//   .filter(
+//     (book) => Array.isArray(book.genres) && book.genres.includes("adventure")
+//   )
+//   .map((book) => book.title);
+
+// adventureBooks;
+
+// fetch("https://jsonplaceholder.typicode.com/todos/1")
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
+
+// console.log("jonas");
+
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+
+  return data;
+}
+
+const todos = await getTodos();
+
+console.log(todos);
+
+console.log("jonas");
